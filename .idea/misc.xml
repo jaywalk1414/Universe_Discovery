@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/drawable-v24/bg_shape_mars.xml" value="0.1605" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/drawable/bg_main_gradient.xml" value="0.107" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/drawable/bg_search_shape.xml" value="0.1605" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1605" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/activity_launching.xml" value="0.25" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/fragment_custom_pick.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/fragment_explore_more.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/fragment_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/fragment_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Applications/Nasa/app/src/main/res/layout/fragment_topic_choosing.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

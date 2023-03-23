@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="dark.suit.owl.nasa.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_customPickFragment"
+            app:destination="@id/customPickFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_exploreMoreFragment"
+            app:destination="@id/exploreMoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="dark.suit.owl.nasa.ui.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/exploreMoreFragment"
+        android:name="dark.suit.owl.nasa.ui.fragment.ExploreMoreFragment"
+        android:label="fragment_explore_more"
+        tools:layout="@layout/fragment_explore_more" />
+    <fragment
+        android:id="@+id/customPickFragment"
+        android:name="dark.suit.owl.nasa.ui.fragment.CustomPickFragment"
+        android:label="fragment_custom_pick"
+        tools:layout="@layout/fragment_custom_pick" />
+</navigation>
