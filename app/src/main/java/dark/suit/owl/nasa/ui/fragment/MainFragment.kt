@@ -1,5 +1,6 @@
 package dark.suit.owl.nasa.ui.fragment
 
+import android.content.Context
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,31 +13,24 @@ import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import dark.suit.owl.nasa.R
+import dark.suit.owl.nasa.base.BaseFragment
 import dark.suit.owl.nasa.data.model.MainImageSliderItem
+import dark.suit.owl.nasa.databinding.FragmentMainBinding
+import dark.suit.owl.nasa.ui.activity.MainActivity
 import dark.suit.owl.nasa.ui.adapter.SliderPagerAdapter
 import dark.suit.owl.nasa.ui.fragment.custom.SliderItemFragment
 import dark.suit.owl.nasa.utils.CarouselEffectTransformer
+import dark.suit.owl.nasa.viewmodel.MainFragmentViewModel
 import java.lang.Math.abs
 
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment<MainFragmentViewModel, FragmentMainBinding, MainActivity>() {
     lateinit var  handlerSlider : Runnable
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_main, container, false)
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
-    }
+    override fun initViews() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val sliderVp = view.findViewById<ViewPager>(R.id.view_pager_mainFrag)
-
+        val sliderVp = viewBinding!!.viewPagerMainFrag
 
         val fragmentSliderList = listOf(
             SliderItemFragment(MainImageSliderItem(R.drawable.custom_slider, "sky is jhghj kljblk")),
@@ -56,8 +50,44 @@ class MainFragment : Fragment() {
 
         }
 
-
-
-
     }
+
+    override fun setViewModel() {
+        viewModel = MainFragmentViewModel(requireContext(), compositeDisposable!!)
+    }
+
+    override fun initGetData() {
+//        TODO("Not yet implemented")
+    }
+
+    override fun inflateBiding(
+        inflater: LayoutInflater?,
+        container: ViewGroup?
+    ): FragmentMainBinding {
+        return FragmentMainBinding.inflate(inflater!!, container, false)
+    }
+
+    override fun onError(error: String?) {
+//        TODO("Not yet implemented")
+    }
+
+    override fun showLoading(message: String?) {
+//        TODO("Not yet implemented")
+    }
+
+    override fun dismissLoading() {
+//        TODO("Not yet implemented")
+    }
+
+    override fun onBackPressed() {
+        navigateUp()
+    }
+
+    override fun showNoConnection() {
+//        TODO("Not yet implemented")
+    }
+
+    override val appContext: Context?
+        get() = requireContext()
+
 }
